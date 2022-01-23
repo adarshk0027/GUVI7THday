@@ -20,16 +20,12 @@ req.open("GET","https://restcountries.com/v3.1/all",true);
 req.send();
 req.onload=function(){
     let result=JSON.parse(req.response)
-    console.log(result[0].population);
     let population=result.filter(country=>country.population<=200000).map(fCountry=> fCountry.name["common"])
     console.log(population.join( " || " ));
 }
 
-
-//using for each
-//LIST NAME CAPITAL AND FLAG
 //REST COUNTRY API
-//COUNTRY NAME OF POPULATION LESS THAN 2 LAKH
+//Print the following details name, capital, flag using forEach function
 
 let req= new XMLHttpRequest();
 let url="https://restcountries.com/v3.1/all";
@@ -49,7 +45,6 @@ req.onload=function(){
 //TOTAL POPULATION USING REDUCE
 
 //REST COUNTRY API
-//COUNTRY NAME OF POPULATION LESS THAN 2 LAKH
 
 let req= new XMLHttpRequest();
 let url="https://restcountries.com/v3.1/all";
@@ -66,8 +61,7 @@ req.onload=function(){
 
 //COUNTRY NAME HAVE CURRENCY UNITED STATES DOLARS
 
-//REST COUNTRY API
-//COUNTRY NAME OF POPULATION LESS THAN 2 LAKH
+
 
 let req= new XMLHttpRequest();
 let url="https://restcountries.com/v3.1/all";
